@@ -75,14 +75,14 @@ function SurfaceCard({ surface, isSelected, onClick }) {
   return (
     <button
       onClick={onClick}
-      className={`text-left p-5 border transition-all ${
+      className={`text-left p-6 border transition-all h-full flex flex-col ${
         isSelected
           ? 'border-accent bg-[#feffff] shadow-brutal-accent'
           : 'border-border bg-[#feffff] shadow-brutal hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-brutal-lg'
       }`}
     >
-      <div className={`mb-3 ${isSelected ? 'text-accent' : 'text-secondary'}`}>
-        {surface.icon}
+      <div className={`w-12 h-12 flex items-center justify-center mb-4 ${isSelected ? 'bg-accent/10' : 'bg-cream'}`}>
+        <div className={isSelected ? 'text-accent' : 'text-secondary'}>{surface.icon}</div>
       </div>
       <h3 className="font-sans font-semibold text-primary text-base">
         {surface.name}

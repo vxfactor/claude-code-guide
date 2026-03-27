@@ -335,27 +335,41 @@ export default function ClaudeMdGuide() {
               const idx = tabs.findIndex((t) => t.id === activeTab)
               if (idx > 0) setActiveTab(tabs[idx - 1].id)
             }}
-            className={`text-sm font-medium transition-colors ${
+            className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold transition-all ${
               activeTab === tabs[0].id
                 ? 'text-border cursor-default'
-                : 'text-secondary hover:text-primary'
+                : 'text-secondary hover:text-primary hover:bg-beige'
             }`}
             disabled={activeTab === tabs[0].id}
           >
             ← Previous
           </button>
-          <span className="text-xs text-secondary">
-            {tabs.findIndex((t) => t.id === activeTab) + 1} / {tabs.length}
-          </span>
+
+          {/* Dot indicators */}
+          <div className="flex items-center gap-2">
+            {tabs.map((tab, i) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`w-2.5 h-2.5 transition-all ${
+                  activeTab === tab.id
+                    ? 'bg-accent scale-125'
+                    : 'bg-border hover:bg-secondary'
+                }`}
+                aria-label={`Go to ${tab.label}`}
+              />
+            ))}
+          </div>
+
           <button
             onClick={() => {
               const idx = tabs.findIndex((t) => t.id === activeTab)
               if (idx < tabs.length - 1) setActiveTab(tabs[idx + 1].id)
             }}
-            className={`text-sm font-medium transition-colors ${
+            className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold transition-all ${
               activeTab === tabs[tabs.length - 1].id
                 ? 'text-border cursor-default'
-                : 'text-secondary hover:text-primary'
+                : 'text-secondary hover:text-primary hover:bg-beige'
             }`}
             disabled={activeTab === tabs[tabs.length - 1].id}
           >

@@ -1,4 +1,5 @@
 import { createContext, useContext, useState } from 'react'
+import { Apple, Monitor } from 'lucide-react'
 
 const PlatformContext = createContext()
 
@@ -19,25 +20,27 @@ export default function PlatformTabs() {
   const { platform, setPlatform } = usePlatform()
 
   return (
-    <div className="inline-flex border border-border bg-white shadow-brutal">
+    <div className="inline-flex bg-beige p-1">
       <button
         onClick={() => setPlatform('mac')}
-        className={`px-6 py-2.5 text-sm font-semibold transition-all ${
+        className={`flex items-center gap-2 px-5 py-2 text-sm font-semibold transition-all ${
           platform === 'mac'
-            ? 'bg-primary text-white'
+            ? 'bg-primary text-[#feffff] shadow-sm'
             : 'text-secondary hover:text-primary'
         }`}
       >
+        <Apple size={14} />
         Mac
       </button>
       <button
         onClick={() => setPlatform('windows')}
-        className={`px-6 py-2.5 text-sm font-semibold transition-all ${
+        className={`flex items-center gap-2 px-5 py-2 text-sm font-semibold transition-all ${
           platform === 'windows'
-            ? 'bg-primary text-white'
+            ? 'bg-primary text-[#feffff] shadow-sm'
             : 'text-secondary hover:text-primary'
         }`}
       >
+        <Monitor size={14} />
         Windows
       </button>
     </div>

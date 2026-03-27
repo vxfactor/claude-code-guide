@@ -57,17 +57,17 @@ export default function FirstRun() {
           {steps.map((step, i) => (
             <div key={i} className="flex gap-5">
               {/* Step number line */}
-              <div className="flex flex-col items-center">
-                <div className="w-10 h-10 bg-[#feffff] border border-border flex items-center justify-center text-accent shadow-brutal flex-shrink-0">
+              <div className="flex flex-col items-center flex-shrink-0">
+                <div className="w-10 h-10 bg-[#feffff] border border-border flex items-center justify-center text-accent shadow-brutal">
                   {step.icon}
                 </div>
                 {i < steps.length - 1 && (
-                  <div className="w-px h-full bg-border mt-2" />
+                  <div className="w-px flex-1 bg-border min-h-[24px]" />
                 )}
               </div>
 
               {/* Content */}
-              <div className="pb-6 flex-1">
+              <div className="pb-8 flex-1 min-h-[80px]">
                 <h3 className="font-sans font-semibold text-primary text-[0.9375rem]">
                   {step.title}
                 </h3>
