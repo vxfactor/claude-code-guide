@@ -35,7 +35,7 @@ export default function Hero() {
         </h1>
 
         <p className="hero-sub text-secondary text-lg mt-6 max-w-[560px] mx-auto leading-relaxed">
-          From zero to your first AI agent. Mac &amp; Windows setup in under 10 minutes. No coding experience required.
+          Set up Claude Code on Mac or Windows in under 10 minutes. No coding experience required. Once it's running, you can start building your own AI agents.
         </p>
 
         <div className="hero-cta mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
