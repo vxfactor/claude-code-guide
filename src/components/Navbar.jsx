@@ -28,8 +28,12 @@ export default function Navbar() {
       style={{ height: '72px' }}
     >
       <div className="max-w-[1200px] mx-auto px-8 h-full flex items-center justify-between">
-        <a href="#" className="font-serif text-xl font-bold text-primary">
-          Nic Silver
+        <a href="#" className="flex items-center">
+          <img
+            src="https://res.cloudinary.com/drdkvqdzd/image/upload/v1772094064/silver_logo_transparent_vrvadv.png"
+            alt="Nic Silver"
+            className="h-8"
+          />
         </a>
 
         {/* Desktop */}
