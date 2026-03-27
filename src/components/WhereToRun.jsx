@@ -101,7 +101,7 @@ export default function WhereToRun() {
       <div className="max-w-[900px] mx-auto">
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-12 h-12 bg-accent text-[#feffff] font-serif font-bold text-xl mb-4">
-            3
+            4
           </div>
           <h2
             className="font-serif text-primary font-bold tracking-tight"

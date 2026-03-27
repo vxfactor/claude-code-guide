@@ -14,6 +14,7 @@ export default function Navbar() {
   const links = [
     { href: '#prerequisites', label: 'Prerequisites' },
     { href: '#installation', label: 'Install' },
+    { href: '#dev-tools', label: 'Dev Tools' },
     { href: '#first-run', label: 'First Run' },
     { href: '#where-to-run', label: 'Where to Run' },
     { href: '#troubleshooting', label: 'Troubleshooting' },

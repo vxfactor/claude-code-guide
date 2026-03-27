@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import WhatIsClaude from './components/WhatIsClaude'
 import Prerequisites from './components/Prerequisites'
 import Installation from './components/Installation'
+import DevTools from './components/DevTools'
 import FirstRun from './components/FirstRun'
 import WhereToRun from './components/WhereToRun'
 import Troubleshooting from './components/Troubleshooting'
@@ -19,6 +20,7 @@ export default function App() {
         <WhatIsClaude />
         <Prerequisites />
         <Installation />
+        <DevTools />
         <FirstRun />
         <WhereToRun />
         <Troubleshooting />
