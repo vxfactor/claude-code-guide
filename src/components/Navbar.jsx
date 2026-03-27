@@ -32,7 +32,7 @@ export default function Navbar() {
           <img
             src="https://res.cloudinary.com/drdkvqdzd/image/upload/v1772094064/silver_logo_transparent_vrvadv.png"
             alt="Nic Silver"
-            className="h-8"
+            className="h-14"
           />
         </a>
 
