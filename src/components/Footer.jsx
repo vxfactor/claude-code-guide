@@ -63,7 +63,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="https://linkedin.com/in/nicsilver"
+                  href="https://www.linkedin.com/in/thenicsilver/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#d9d0c9] text-sm hover:text-[#feffff] transition-colors inline-flex items-center gap-1"
