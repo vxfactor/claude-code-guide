@@ -5,6 +5,7 @@ import WhatIsClaude from './components/WhatIsClaude'
 import Prerequisites from './components/Prerequisites'
 import Installation from './components/Installation'
 import FirstRun from './components/FirstRun'
+import WhereToRun from './components/WhereToRun'
 import Troubleshooting from './components/Troubleshooting'
 import ClaudeMdGuide from './components/ClaudeMdGuide'
 import Footer from './components/Footer'
@@ -19,6 +20,7 @@ export default function App() {
         <Prerequisites />
         <Installation />
         <FirstRun />
+        <WhereToRun />
         <Troubleshooting />
         <ClaudeMdGuide />
         <Footer />

@@ -15,6 +15,7 @@ export default function Navbar() {
     { href: '#prerequisites', label: 'Prerequisites' },
     { href: '#installation', label: 'Install' },
     { href: '#first-run', label: 'First Run' },
+    { href: '#where-to-run', label: 'Where to Run' },
     { href: '#troubleshooting', label: 'Troubleshooting' },
     { href: '#claude-md', label: 'CLAUDE.md' },
   ]
