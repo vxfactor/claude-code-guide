@@ -18,7 +18,7 @@ export default function Installation() {
           >
             Install Claude Code
           </h2>
-          <p className="text-secondary mt-3">One command. That's it.</p>
+          <p className="text-secondary mt-3">One command, pasted into your terminal. That's it.</p>
           <div className="mt-8 flex justify-center">
             <PlatformTabs />
           </div>
@@ -47,6 +47,9 @@ export default function Installation() {
               <h3 className="font-sans font-semibold text-primary mb-3">
                 Option B: Homebrew
               </h3>
+              <p className="text-secondary text-sm mb-4">
+                Homebrew is a popular tool for installing software on Mac. If you don't know what it is, stick with Option A above.
+              </p>
               <div className="shadow-brutal">
                 <CodeBlock label="Terminal">
                   {`brew install --cask claude-code`}
@@ -61,7 +64,7 @@ export default function Installation() {
           <div className="space-y-8">
             <div className="bg-[#feffff] border border-accent p-5 shadow-brutal">
               <p className="text-sm text-primary font-medium">
-                Make sure Git for Windows is installed first.{' '}
+                <strong>Important first step:</strong> Git for Windows must be installed before Claude Code. It's a free tool that Claude Code needs to work behind the scenes.{' '}
                 <a
                   href="https://git-scm.com/downloads/win"
                   target="_blank"
@@ -92,8 +95,11 @@ export default function Installation() {
 
             <div>
               <h3 className="font-sans font-semibold text-primary mb-3">
-                Option B: CMD
+                Option B: Command Prompt (CMD)
               </h3>
+              <p className="text-secondary text-sm mb-4">
+                If you prefer the older Command Prompt instead of PowerShell, use this command:
+              </p>
               <div className="shadow-brutal">
                 <CodeBlock label="Command Prompt">
                   {`curl -fsSL https://claude.ai/install.cmd -o install.cmd && install.cmd && del install.cmd`}
@@ -105,6 +111,9 @@ export default function Installation() {
               <h3 className="font-sans font-semibold text-primary mb-3">
                 Option C: WinGet
               </h3>
+              <p className="text-secondary text-sm mb-4">
+                WinGet is Windows' built-in package manager (available on Windows 10 1709+). If you're not sure what this is, go with Option A.
+              </p>
               <div className="shadow-brutal">
                 <CodeBlock label="PowerShell">
                   {`winget install Anthropic.ClaudeCode`}

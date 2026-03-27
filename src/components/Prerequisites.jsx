@@ -9,13 +9,13 @@ export default function Prerequisites() {
     {
       icon: <CreditCard size={18} />,
       title: 'Anthropic Account',
-      description: 'You need a Claude Pro ($20/mo), Max, Teams, or Enterprise plan. The free Claude.ai plan does NOT include Claude Code.',
+      description: 'You need a paid Anthropic account — either Claude Pro ($20/mo), Max, Teams, or Enterprise. The free Claude.ai plan does NOT include Claude Code. Sign up at claude.ai if you don\'t have one yet.',
       important: true,
     },
     {
       icon: <Cpu size={18} />,
       title: '4 GB RAM minimum',
-      description: '8 GB or more is recommended for a smooth experience.',
+      description: '8 GB or more is recommended. Not sure how much you have? On Mac: Apple menu → About This Mac. On Windows: Settings → System → About.',
     },
     {
       icon: <Wifi size={18} />,

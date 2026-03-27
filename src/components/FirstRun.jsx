@@ -1,35 +1,37 @@
 import CodeBlock from './CodeBlock'
-import { FolderOpen, Terminal, Globe, ArrowLeft, MessageSquare } from 'lucide-react'
+import { FolderOpen, Terminal, Globe, ArrowLeft, MessageSquare, HelpCircle } from 'lucide-react'
 
 const steps = [
   {
     icon: <FolderOpen size={20} />,
-    title: 'Navigate to your project',
-    description: 'Open your terminal and go to any project folder — or create a new empty one.',
+    title: 'Open your terminal and go to a project folder',
+    description: 'A "project folder" is just any folder on your computer where you want Claude Code to work. It could be an existing project or a brand new empty folder.',
+    tip: 'Don\'t have a project yet? Create a new folder: mkdir my-first-project then cd my-first-project',
     code: 'cd your-project',
   },
   {
     icon: <Terminal size={20} />,
-    title: 'Run claude',
-    description: 'Type claude and hit enter. This starts the interactive agent.',
+    title: 'Type "claude" and hit enter',
+    description: 'This starts Claude Code. It will launch inside whatever folder you\'re in, and it can now see and edit any files in that folder.',
     code: 'claude',
   },
   {
     icon: <Globe size={20} />,
-    title: 'Sign in via browser',
-    description: 'Your browser opens automatically for a one-time OAuth sign-in with your Anthropic account. If it doesn\'t open, press c to copy the URL.',
+    title: 'Sign in through your browser',
+    description: 'A browser window will pop up asking you to log in to your Anthropic account. This only happens once — after this, Claude Code remembers who you are.',
+    tip: 'Browser didn\'t open? Press the "c" key to copy the login link, then paste it into your browser manually.',
     code: null,
   },
   {
     icon: <ArrowLeft size={20} />,
-    title: 'Return to terminal',
-    description: 'After signing in, go back to your terminal. You\'re now authenticated — no API keys to paste, no config files to edit.',
+    title: 'Go back to your terminal',
+    description: 'Once you\'ve signed in, switch back to your terminal window. You\'ll see Claude Code is ready and waiting for you to type something.',
     code: null,
   },
   {
     icon: <MessageSquare size={20} />,
-    title: 'Start talking',
-    description: 'Describe what you want in plain English. Claude Code reads your files, understands your project, and gets to work.',
+    title: 'Start talking to it',
+    description: 'Just type what you want in plain English. "Create a simple website about my coffee shop" or "Write a Python script that renames all my photos." Claude Code will read your files, understand your project, and start building.',
     code: null,
   },
 ]
@@ -72,6 +74,12 @@ export default function FirstRun() {
                 <p className="text-secondary text-sm mt-1 leading-relaxed">
                   {step.description}
                 </p>
+                {step.tip && (
+                  <div className="mt-2 bg-cream border border-border p-3 flex gap-2 items-start">
+                    <HelpCircle size={14} className="text-accent flex-shrink-0 mt-0.5" />
+                    <p className="text-secondary text-xs leading-relaxed">{step.tip}</p>
+                  </div>
+                )}
                 {step.code && (
                   <div className="mt-3 shadow-brutal">
                     <CodeBlock>{step.code}</CodeBlock>
